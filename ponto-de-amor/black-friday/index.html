@@ -9,7 +9,7 @@
 <!--
   Leitura da Black Friday 2025 da Ponto de Amor: o que correu bem, o que muda e as propostas para 2026.
   Faturacao e encomendas: dados reais da loja (novembro de 2025 e 1 a 6 de dezembro de 2025).
-  Metricas de email, listas e comparacoes com 2024: API do Klaviyo.
+  Metricas de email, listas, funil de captacao e comparacoes com 2024: API do Klaviyo.
   Pagina autonoma: CSS inline, tipografia do Google Fonts com fallback de sistema.
 -->
 <style>
@@ -145,6 +145,23 @@
   .charts{display:grid;gap:24px;margin-top:34px;}
   .chart-wrap svg{margin:0 auto;max-width:720px;width:100%;}
 
+  /* ---------- funil ---------- */
+  .funnel{display:flex;flex-direction:column;gap:2px;margin-top:6px;}
+  .frow{
+    display:grid;grid-template-columns:minmax(0,1fr);gap:6px;
+    background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:18px 20px;
+  }
+  @media(min-width:720px){ .frow{grid-template-columns:270px minmax(0,1fr);align-items:center;gap:24px;} }
+  .fnum{display:flex;align-items:baseline;gap:10px;}
+  .fnum .v{font-family:"Zilla Slab",serif;font-size:1.9rem;font-weight:600;line-height:1;}
+  .fnum .p{font-size:.86rem;color:var(--muted);font-variant-numeric:tabular-nums;}
+  .flab{font-size:.9rem;color:var(--muted);margin-top:4px;}
+  .ftrack{background:var(--surface-2);border-radius:2px;height:34px;overflow:hidden;}
+  .ftrack span{display:block;height:100%;border-radius:2px;}
+  .f1 .v{color:var(--blue);} .f2 .v{color:var(--green);} .f3 .v{color:var(--orange);}
+  .funnelnote{font-size:.85rem;color:var(--muted);max-width:70ch;margin-top:16px;}
+  .funnelnote b{color:var(--ink);font-weight:600;}
+
   /* ---------- ideas ---------- */
   .group{margin-top:34px;}
   .group:first-of-type{margin-top:0;}
@@ -204,6 +221,40 @@
     </div>
 
   </header>
+
+  <section>
+    <div class="sechead">
+      <h2>O funil da época</h2>
+      <span class="count num">1 de novembro a 6 de dezembro</span>
+    </div>
+
+    <div class="funnel">
+      <div class="frow f1">
+        <div>
+          <div class="fnum"><span class="v num">17.018</span><span class="p">100%</span></div>
+          <div class="flab">contactos novos na base</div>
+        </div>
+        <div class="ftrack"><span style="width:100%;background:var(--blue);"></span></div>
+      </div>
+      <div class="frow f2">
+        <div>
+          <div class="fnum"><span class="v num">6.088</span><span class="p">35,8%</span></div>
+          <div class="flab">fizeram a primeira compra</div>
+        </div>
+        <div class="ftrack"><span style="width:35.8%;background:var(--green);"></span></div>
+      </div>
+      <div class="frow f3">
+        <div>
+          <div class="fnum"><span class="v num">275</span><span class="p">1,6%</span></div>
+          <div class="flab">voltaram a comprar</div>
+        </div>
+        <div class="ftrack"><span style="width:1.6%;min-width:3px;background:var(--orange);"></span></div>
+      </div>
+    </div>
+
+    <p class="funnelnote">De cada 100 pessoas que entraram na base durante a época, <b>36 compraram e menos de 2 voltaram a comprar</b>. Das que compraram, 89% fizeram-no ainda dentro da própria época, o que diz que a captação apanha sobretudo gente já em processo de compra. A coorte gerou pelo menos 301.294 € até hoje, cerca de 18 € por contacto captado, e só 14 mil desses euros vieram de segundas compras.</p>
+    <p class="funnelnote">Contam como segunda compra as encomendas feitas mais de uma semana depois da primeira, para não confundir recompra com encomendas repetidas no mesmo dia (foram 252). Conversões medidas no Klaviyo, que não regista a totalidade das encomendas da loja: os valores reais são superiores a estes.</p>
+  </section>
 
   <section>
     <div class="sechead good">
