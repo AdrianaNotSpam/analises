@@ -151,7 +151,7 @@
     display:grid;grid-template-columns:minmax(0,1fr);gap:6px;
     background:var(--surface);border:1px solid var(--line);border-radius:3px;padding:18px 20px;
   }
-  @media(min-width:720px){ .frow{grid-template-columns:270px minmax(0,1fr);align-items:center;gap:24px;} }
+  @media(min-width:720px){ .frow{grid-template-columns:260px minmax(0,1fr) 128px;align-items:center;gap:24px;} }
   .fnum{display:flex;align-items:baseline;gap:10px;}
   .fnum .v{font-family:"Zilla Slab",serif;font-size:1.9rem;font-weight:600;line-height:1;}
   .fnum .p{font-size:.86rem;color:var(--muted);font-variant-numeric:tabular-nums;}
@@ -159,6 +159,13 @@
   .ftrack{background:var(--surface-2);border-radius:2px;height:34px;overflow:hidden;}
   .ftrack span{display:block;height:100%;border-radius:2px;}
   .f1 .v{color:var(--blue);} .f2 .v{color:var(--green);} .f3 .v{color:var(--orange);}
+  .fcomp{border-left:1px solid var(--line);padding-left:16px;display:flex;flex-direction:column;gap:1px;}
+  .fcomp .lab{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:600;}
+  .fcomp .val{font-size:1.02rem;font-variant-numeric:tabular-nums;font-weight:500;}
+  .fcomp .pct{font-size:.76rem;color:var(--muted);font-variant-numeric:tabular-nums;}
+  .fcomp .var{font-size:.82rem;font-weight:600;font-variant-numeric:tabular-nums;margin-top:3px;}
+  .fcomp .var.up{color:var(--green);} .fcomp .var.down{color:var(--orange);}
+  @media(max-width:719px){ .fcomp{border-left:0;padding-left:0;border-top:1px solid var(--line);padding-top:10px;margin-top:4px;flex-direction:row;align-items:baseline;gap:10px;flex-wrap:wrap;} }
   .funnelnote{font-size:.85rem;color:var(--muted);max-width:70ch;margin-top:16px;}
   .funnelnote b{color:var(--ink);font-weight:600;}
 
@@ -235,6 +242,11 @@
           <div class="flab">contactos novos na base</div>
         </div>
         <div class="ftrack"><span style="width:100%;background:var(--blue);"></span></div>
+        <div class="fcomp">
+          <span class="lab">2024</span>
+          <span class="val num">11.399</span>
+          <span class="var up">+49%</span>
+        </div>
       </div>
       <div class="frow f2">
         <div>
@@ -242,6 +254,12 @@
           <div class="flab">compraram em novembro ou dezembro</div>
         </div>
         <div class="ftrack"><span style="width:34.3%;background:var(--green);"></span></div>
+        <div class="fcomp">
+          <span class="lab">2024</span>
+          <span class="val num">4.682</span>
+          <span class="pct num">41,1%</span>
+          <span class="var up">+25%</span>
+        </div>
       </div>
       <div class="frow f3">
         <div>
@@ -249,11 +267,18 @@
           <div class="flab">voltaram a comprar nos 6 meses seguintes à primeira compra</div>
         </div>
         <div class="ftrack"><span style="width:1.3%;min-width:3px;background:var(--orange);"></span></div>
+        <div class="fcomp">
+          <span class="lab">2024</span>
+          <span class="val num">308</span>
+          <span class="pct num">2,7%</span>
+          <span class="var down">-30%</span>
+        </div>
       </div>
     </div>
 
     <p class="funnelnote">De cada 100 pessoas que entraram na base durante a época, <b>34 compraram ainda nesse Natal e pouco mais de 1 voltou a comprar</b>. E <b>71% dessas primeiras compras aconteceram no mesmo dia da inscrição</b> (76% até ao dia seguinte): o pop-up está sobretudo a registar quem já ia comprar, não a criar procura nova. Os 9% que compram entre uma semana e um mês depois são o grupo onde o email faz mesmo o trabalho de convencer.</p>
-    <p class="funnelnote">Janelas usadas: primeira compra em novembro ou dezembro de 2025, segunda compra nos seis meses seguintes à primeira. Contam como segunda compra as encomendas feitas mais de uma semana depois da primeira, para não confundir recompra com encomendas repetidas no mesmo dia; sem esse filtro seriam 346 pessoas em vez de 216. Conversões medidas no Klaviyo, que não regista a totalidade das encomendas da loja: os valores reais são superiores a estes.</p>
+    <p class="funnelnote"><b>Contra a Black Friday de 2024, o funil alargou em cima e estreitou em baixo.</b> Captámos mais 49% de contactos e trouxemos mais 25% de compradores novos, mas a taxa de conversão desceu de 41,1% para 34,3% (esperado, com captação mais larga) e a recompra caiu de 6,6% para 3,7% de quem comprou, ou seja menos 30% de pessoas a voltar, em números absolutos, apesar de termos partido de uma base maior.</p>
+    <p class="funnelnote">Janelas usadas, iguais nos dois anos: primeira compra em novembro ou dezembro, segunda compra nos seis meses seguintes à primeira. Contam como segunda compra as encomendas feitas mais de uma semana depois da primeira, para não confundir recompra com encomendas repetidas no mesmo dia; sem esse filtro seriam 346 pessoas em 2025 e 454 em 2024.</p>
   </section>
 
   <section>
