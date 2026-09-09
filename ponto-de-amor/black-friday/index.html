@@ -36,7 +36,8 @@
     --blue:#4F67B1;
     --blue-soft:#DFE4F3;
     --yellow:#D7D55C;
-    --on-green:#F2F6F4;
+    --gate-bg:#0D0D0D;
+    --gate-ink:#E6E6E6;
     --shadow:0 1px 2px rgba(13,13,13,.05), 0 8px 24px -16px rgba(12,89,82,.35);
     color-scheme:light;
   }
@@ -55,7 +56,8 @@
       --blue:#8B9DDC;
       --blue-soft:#1E2438;
       --yellow:#DEDC7A;
-      --on-green:#0E1413;
+      --gate-bg:#E2E6E4;
+      --gate-ink:#0D0D0D;
       --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 28px -20px rgba(0,0,0,.9);
       color-scheme:dark;
     }
@@ -74,7 +76,8 @@
     --blue:#8B9DDC;
     --blue-soft:#1E2438;
     --yellow:#DEDC7A;
-    --on-green:#0E1413;
+    --gate-bg:#E2E6E4;
+    --gate-ink:#0D0D0D;
     --shadow:0 1px 2px rgba(0,0,0,.4), 0 12px 28px -20px rgba(0,0,0,.9);
     color-scheme:dark;
   }
@@ -158,14 +161,14 @@
   .idea p{font-size:.95rem;color:var(--muted);}
 
   .gate{
-    margin-top:34px;background:var(--green);color:var(--on-green);border-radius:3px;padding:34px 32px;
+    margin-top:34px;background:var(--gate-bg);color:var(--gate-ink);border-radius:3px;padding:34px 32px;
     display:flex;flex-direction:column;gap:26px;
   }
   .gate h2{color:inherit;}
   .gate .pair{display:grid;gap:24px;}
   @media(min-width:760px){ .gate .pair{grid-template-columns:1fr 1fr;gap:34px;} }
   .gate h3{margin-bottom:6px;}
-  .gate p{opacity:.86;font-size:.98rem;}
+  .gate p{opacity:.82;font-size:.98rem;}
 
   footer{margin-top:64px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:.84rem;display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;}
 </style>
@@ -386,7 +389,7 @@
 
     <div class="gate">
       <div>
-        <span class="eyebrow" style="color:inherit;opacity:.75;">As duas decisões que vêm antes de tudo</span>
+        <span class="eyebrow" style="color:var(--orange);">As duas decisões que vêm antes de tudo</span>
         <h2 style="margin-top:8px;">Sem estas, o calendário não se desenha</h2>
       </div>
       <div class="pair">
